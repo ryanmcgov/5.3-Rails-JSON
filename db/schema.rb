@@ -17,10 +17,11 @@ ActiveRecord::Schema.define(version: 20150715165855) do
   enable_extension "plpgsql"
 
   create_table "athletes", force: :cascade do |t|
+    t.string   "name",            null: false
     t.string   "sport",           null: false
     t.string   "personal_record"
-    t.integer  "height",          null: false
-    t.integer  "weight",          null: false
+    t.string   "height",          null: false
+    t.string   "weight",          null: false
     t.date     "retirement"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
